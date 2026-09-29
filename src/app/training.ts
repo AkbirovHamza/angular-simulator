@@ -6,11 +6,11 @@ function calc(a: number, b: number): number {
 
 //Пункт 4
 
-let uploadStatus: ('loading' | 'success' | 'error');
+let uploadStatus: 'loading' | 'success' | 'error';
 
 //Пункт 5
 
-let textFormat: ('uppercase' | 'lowercase' | 'capitalize');
+let textFormat: 'uppercase' | 'lowercase' | 'capitalize';
 
 //Пункт 6
 
