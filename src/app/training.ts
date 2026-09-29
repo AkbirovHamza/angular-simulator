@@ -32,9 +32,9 @@ interface userHome extends user {
 //Пункт 8
 
 function formatText(rowText: string, textFormat: ('uppercase' | 'lowercase' | 'capitalize')): string {
-  if(textFormat == 'capitalize') {
+  if (textFormat == 'capitalize') {
     return rowText.charAt(0).toUpperCase() + rowText.slice(1);
-  } else if(textFormat == 'lowercase') {
+  } else if (textFormat == 'lowercase') {
     return rowText.toLowerCase();
   } else 
     return rowText.toUpperCase();
@@ -72,7 +72,7 @@ const arrayUsers: user[] = [
   }
 ]
 
-const newArrayUsers = arrayUsers.filter(user => {
+const newArrayUsers: user[] = arrayUsers.filter((user: user) => {
   if (user.age >= 18) {
     return true
   }
