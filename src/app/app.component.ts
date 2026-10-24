@@ -29,19 +29,11 @@ constructor() {
     1500,
     4000
   ]);
-
-  console.log('Товары:', products.getAll());
-  console.log('Цены:', prices.getAll());
-
- 
-  console.log('Первый товар:', products.get(0));
-  console.log('Цена мыши:', prices.get(1));
 }
 
   isPrimaryColor (color: Color): boolean {
   return Object.values(Color).includes(color);
 }
-
 
 saveLastVisit (): void {
   localStorage.setItem('lastVisit', new Date().toISOString());
@@ -50,9 +42,6 @@ saveLastVisit (): void {
 saveQuantityVisits (): void {
   const visits = Number(localStorage.getItem('visits')) || 0;
   localStorage.setItem('visits', String(visits + 1));}
-
-  
-
 }
 
 

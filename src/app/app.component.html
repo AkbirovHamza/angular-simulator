@@ -2,7 +2,7 @@
   <section class="tour-section" aria-labelledby="tour-section__title">
     <img
       class="tour-section__image"
-      src="images/BackGroundMountainsImg.svg"
+      src="images/BackGroundMountainsImg.jpg"
       alt="Горный пейзаж"
     />
     <div class="tour-section__overlay"></div>
@@ -10,20 +10,20 @@
     <header class="header">
       <div class="container header__content">
         <a class="logo" href="#top" aria-label="РумТибет — на главную">
-          <img class="logo__mountains" src="images/mountainsImg.svg" alt="" />
+          <img class="logo__mountains" src="images/mountainsImg-icon.svg" alt="Логотип РумТибет" />
           <span>{{ logoName }}</span>
         </a>
 
         <nav class="navigation" aria-label="Основная навигация">
-          <a href="#top">Главная</a>
-          <a href="#guide">Про гида</a>
-          <a href="#program">Программа тура</a>
-          <a href="#price">Стоимость</a>
-          <a href="#blog">Блог</a>
-          <a href="#contacts">Контакты</a>
+          <a id="main-top" href="#top">Главная</a>
+          <a id="guide" href="#guide">Про гида</a>
+          <a id="program" href="#program">Программа тура</a>
+          <a id="price" href="#price">Стоимость</a>
+          <a id="blog" href="#blog">Блог</a>
+          <a id="contacts" href="#contacts">Контакты</a>
         </nav>
 
-        <button class="consultation-button" type="button">Консультация</button>
+        <button id="consultation-button" class="consultation-button" type="button">Консультация</button>
       </div>
     </header>
 
@@ -35,7 +35,7 @@
 
       <form class="search-panel" aria-label="Подбор программы тура">
         <label class="search-field">
-          <select name="location" aria-label="Локация для тура">
+          <select id="location" name="location" aria-label="Локация для тура">
             <option value="" selected disabled>Локация для тура</option>
             <option value="caucasus">Кавказ</option>
             <option value="altai">Алтай</option>
@@ -45,12 +45,12 @@
         </label>
 
         <label class="search-field">
-          <input name="date" type="date" aria-label="Дата похода" />
+          <input id="date" name="date" type="date" aria-label="Дата похода" />
           <span>укажите дату</span>
         </label>
 
         <label class="search-field">
-          <select name="participants" aria-label="Количество участников">
+          <select id="participants" name="participants" aria-label="Количество участников">
             <option value="" selected disabled>Участники</option>
             <option value="1">1 человек</option>
             <option value="2">2 человека</option>
@@ -60,7 +60,7 @@
           <span>выберите из списка</span>
         </label>
 
-        <button class="search-panel__button" type="button">Найти программу</button>
+        <button id="search-panel-button" class="search-panel-button" type="button">Найти программу</button>
       </form>
     </div>
   </section>
