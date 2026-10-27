@@ -10,39 +10,43 @@ import { Collection } from '../collection';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  logoName = 'РУМТИБЕТ';
+  logoName: string = 'РУМТИБЕТ';
 
-constructor() {
-  this.saveLastVisit();
-  this.saveQuantityVisits (); 
+  constructor() {
+    this.saveLastVisit();
+    this.saveQuantityVisits(); 
 
-  // Первый источник данных  
-  const products = new Collection<string>([
-    'Ноутбук',
-    'Мышь',
-    'Клавиатура'
-  ]);
+    // Первый источник данных  
+    const products: Collection<string> = new Collection<string>([
+      'Ноутбук',
+      'Мышь',
+      'Клавиатура'
+    ]);
 
-  // Второй источник данных  
-  const prices = new Collection<number>([
-    75000,
-    1500,
-    4000
-  ]);
+    // Второй источник данных  
+    const prices: Collection<number> = new Collection<number>([
+      75000,
+      1500,
+      4000
+    ]);
+  }
+
+  isPrimaryColor(color: Color): boolean {
+    return [
+      Color.RED,
+      Color.GREEN,
+      Color.BLUE
+    ].includes(color);
+  }
+
+  saveLastVisit(): void {
+    localStorage.setItem('lastVisit', new Date().toISOString());
+  }
+
+  saveQuantityVisits(): void {
+    const visits: number = Number(localStorage.getItem('visits')) || 0;
+    localStorage.setItem('visits', String(visits + 1));
+  }
 }
-
-  isPrimaryColor (color: Color): boolean {
-  return Object.values(Color).includes(color);
-}
-
-saveLastVisit (): void {
-  localStorage.setItem('lastVisit', new Date().toISOString());
-}
-
-saveQuantityVisits (): void {
-  const visits = Number(localStorage.getItem('visits')) || 0;
-  localStorage.setItem('visits', String(visits + 1));}
-}
-
 
  
