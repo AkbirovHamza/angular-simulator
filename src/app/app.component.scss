@@ -1,0 +1,152 @@
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.tour-section {
+  position: relative;
+  min-height: 985px;
+  overflow: hidden;
+  color: var(--color-primary);
+}
+
+.tour-section__image {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-section__overlay {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 18, 30, 0.3);
+}
+
+.header {
+  padding-top: 32px;
+  background-color: #4c535b;
+  height: 120px;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo__mountains {
+  width: 138px;
+}
+
+.navigation {
+  display: flex;
+  gap: 24px;
+}
+
+.navigation a {
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.consultation-button {
+  width: 158px;
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.tour-section__content {
+  padding-top: 292px;
+}
+
+.tour-section__title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2%;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.tour-section__title span {
+  display: block;
+}
+
+.search-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  height: 161px;
+  margin-top: 41px;
+  padding: 40px 42px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 270px;
+}
+
+.search-field select,
+.search-field input {
+  width: 270px;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(253, 253, 253, 0.72);
+  border-radius: 4px;
+  background: rgba(24, 18, 30, 0.12);
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+}
+
+.search-field span {
+  color: rgba(253, 253, 253, 0.78);
+  font-size: 14px;
+}
+
+.search-field option {
+  color: #18121e;
+}
+
+.search-panel-button {
+  width: 213px;
+  height: 52px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
