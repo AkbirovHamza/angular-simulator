@@ -24,19 +24,19 @@ export class AppComponent {
   isLoading: boolean = true;
   features = [
   {
-    Image: 'images/peopleImage.svg',
+    Image: 'images/peopleImage-icon.svg',
     title: 'Опытный гид',
     description: `Для современного мира базовый вектор развития предполагает
 независимые способы реализации соответствующих условий активизации.`,
   },
   {
-    Image: 'images/supportImage.svg',
+    Image: 'images/supportImage-icon.svg',
     title: 'Безопасный поход',
     description: `Для современного мира базовый вектор развития предполагает
 независимые способы реализации соответствующих условий активизации.`,
   },
   {
-    Image: 'images/pricesImage.svg',
+    Image: 'images/pricesImage-icon.svg',
     title: 'Лояльные цены',
     description: `Для современного мира базовый вектор развития предполагает
 независимые способы реализации соответствующих условий активизации.`,
