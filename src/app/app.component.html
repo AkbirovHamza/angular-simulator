@@ -23,12 +23,12 @@
           </a>
 
           <nav class="navigation" aria-label="Основная навигация">
-            <a href="#top">Главная</a>
-            <a href="#guide">Про гида</a>
-            <a href="#program">Программа тура</a>
-            <a href="#price">Стоимость</a>
-            <a href="#blog">Блог</a>
-            <a href="#contacts">Контакты</a>
+            <a id="menu-button" href="#top">Главная</a>
+            <a id="guide-button" href="#guide">Про гида</a>
+            <a id="program-button" href="#program">Программа тура</a>
+            <a id="price-button" href="#price">Стоимость</a>
+            <a id="blog-button" href="#blog">Блог</a>
+            <a id="contacts-button" href="#contacts">Контакты</a>
           </nav>
 
           <div class="header__tools">
@@ -38,9 +38,10 @@
 
               @if (isCounterVisible) {
                 <div class="demo-panel__counter">
-                  <button type="button" (click)="increaseCounter()">+</button>
+                  <button id="increaseCounter-button" type="button" (click)="increaseCounter()">+</button>
                   <span>{{ counter }}</span>
                   <button
+                    id="decreaseCounter-button"
                     type="button"
                     [disabled]="counter === 0"
                     (click)="decreaseCounter()"
@@ -60,15 +61,15 @@
             </div>
 
             <div class="header__actions">
-              <button class="consultation-button" type="button">
+              <button id="consultation-button" class="consultation-button" type="button">
                 Консультация
               </button>
 
-              <button type="button" (click)="showCounter()">
+              <button id="show-clicker-button" type="button" (click)="showCounter()">
                 {{ isCounterVisible ? 'Скрыть кликер' : 'Показать кликер' }}
               </button>
 
-              <button type="button" (click)="showDate()">
+              <button id="show-date-button" type="button" (click)="showDate()">
                 {{ isDateVisible ? 'Скрыть дату' : 'Показать дату' }}
               </button>
             </div>
@@ -100,7 +101,7 @@
           </label>
 
           <label class="search-field">
-            <input id="date" [(ngModel)]="date" name="date" type="date" aria-label="Дата похода" />
+            <input id="date-input" [(ngModel)]="date" name="date" type="date" aria-label="Дата похода" />
             <span>укажите дату</span>
           </label>
 
@@ -124,6 +125,7 @@
         <div class="live-input">
           <div class="live-input__field">
             <input
+              id="live-input"
               type="text"
               name="liveText"
               [ngModel]="userText"
@@ -144,7 +146,7 @@
       <div class="imagesMountains">
         <img class="img-mountainsPhoto" src="images/mountainsPhoto.jpg" alt="mountainsPhoto">
         <img class="img-house-InMountains" src="images/house-InMountains.jpg" alt="house-InMountains">
-        <img class="img-playButton" src="images/PlayButton-icon.svg" alt="playButton">
+        <img class="img-playButton" src="images/playButton-icon.svg" alt="playButton">
 
       </div>
 
@@ -159,7 +161,7 @@
 литературе.</pre>
 
 
-          <button class="tourProgrammButton">Программа тура</button>
+          <button id="tourProgramm-button" class="tourProgrammButton">Программа тура</button>
       </div>
 
     </section>
@@ -186,7 +188,7 @@
           </div>
         </div>
         }
-      <button class="pricesProgrammButton">Стоимость программ</button>
+      <button id="prices-programm-button" class="pricesProgrammButton">Стоимость программ</button>
       </div>
       
 
