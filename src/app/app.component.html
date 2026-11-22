@@ -1,9 +1,9 @@
 
 @if (isLoading === true) {
   <div class="loading-indicator">
-    <img src="images/loading-icon.svg" alt="loadingIcon " class="loadingImage">
+    <img src="images/loading-icon.svg" alt="loadingIcon" class="loadingImage">
     <p>Загрузка...</p>
-  </div> 
+  </div>
 } @else {
   <main class="landing-page">
     <section class="tour-section" aria-labelledby="tour-section__title">
@@ -17,31 +17,29 @@
       <header class="header">
         <div class="container header__content">
 
-          <a class="logo" href="#top" aria-label="РумТибет — на главную">
+          <a id="home-logo-link" class="logo" href="#top" aria-label="РумТибет — на главную">
             <img class="logo__mountains" src="images/mountainsImg-icon.svg" alt="Логотип РумТибет" />
             <span>{{ logoName }}</span>
           </a>
 
           <nav class="navigation" aria-label="Основная навигация">
-            <a id="menu-button" href="#top">Главная</a>
-            <a id="guide-button" href="#guide">Про гида</a>
-            <a id="program-button" href="#program">Программа тура</a>
-            <a id="price-button" href="#price">Стоимость</a>
-            <a id="blog-button" href="#blog">Блог</a>
-            <a id="contacts-button" href="#contacts">Контакты</a>
+            <a id="home-link" href="#top">Главная</a>
+            <a id="guide-link" href="#guide">Про гида</a>
+            <a id="program-link" href="#program">Программа тура</a>
+            <a id="price-link" href="#price">Стоимость</a>
+            <a id="blog-link" href="#blog">Блог</a>
+            <a id="contacts-link" href="#contacts">Контакты</a>
           </nav>
 
           <div class="header__tools">
 
             <div class="header__counter">
-                
-
               @if (isCounterVisible) {
                 <div class="demo-panel__counter">
-                  <button id="increaseCounter-button" type="button" (click)="increaseCounter()">+</button>
+                  <button id="increase-counter-button" type="button" (click)="increaseCounter()">+</button>
                   <span>{{ counter }}</span>
                   <button
-                    id="decreaseCounter-button"
+                    id="decrease-counter-button"
                     type="button"
                     [disabled]="counter === 0"
                     (click)="decreaseCounter()"
@@ -51,8 +49,6 @@
             </div>
 
             <div class="header__date">
-              
-
               @if (isDateVisible) {
                 <span class="current-date">
                   {{ currentDate | date:'dd.MM.yyyy HH:mm:ss' }}
@@ -75,13 +71,8 @@
             </div>
 
           </div>
-
         </div>
       </header>
-
-     
-
-      
 
       <div class="container tour-section__content" id="top">
         <h1 class="tour-section__title" id="tour-section__title">
@@ -116,11 +107,8 @@
             <span>выберите из списка</span>
           </label>
 
-          <button id="search-panel-button" [disabled] = '!location || !date || !participants' class="search-panel-button" type="button">Найти программу</button>
-
-          
-
-        </form> 
+          <button id="search-panel-button" [disabled]="!location || !date || !participants" class="search-panel-button" type="button">Найти программу</button>
+        </form>
 
         <div class="live-input">
           <div class="live-input__field">
@@ -137,8 +125,6 @@
 
           <p>{{ userText || 'Введенный текст' }}</p>
         </div>
-
-
       </div>
     </section>
 
@@ -147,7 +133,6 @@
         <img class="img-mountainsPhoto" src="images/mountainsPhoto.jpg" alt="mountainsPhoto">
         <img class="img-house-InMountains" src="images/house-InMountains.jpg" alt="house-InMountains">
         <img class="img-playButton" src="images/playButton-icon.svg" alt="playButton">
-
       </div>
 
       <div class="mountainsInfo">
@@ -160,10 +145,8 @@
 "consectetur"и занялся его поисками в классической латинской
 литературе.</pre>
 
-
-          <button id="tourProgramm-button" class="tourProgrammButton">Программа тура</button>
+        <button id="tour-program-button" class="tourProgrammButton" type="button">Программа тура</button>
       </div>
-
     </section>
 
     <section class="bestProgramsSection">
@@ -175,32 +158,29 @@
 профессор латыни из колледжа.</pre>
 
         @for (feature of features; track feature.title) {
-        <div class="feature">
-          <img
-            [src]="feature.Image"
-            [alt]="feature.title"
-            class="feature-image"
-          >
+          <div class="feature">
+            <img
+              [src]="feature.Image"
+              [alt]="feature.title"
+              class="feature-image"
+            >
 
-          <div class="feature-content">
-            <h3 class="h3-forCards">{{ feature.title }}</h3>
-            <p class="textForCards">{{ feature.description }}</p>
+            <div class="feature-content">
+              <h3 class="h3-forCards">{{ feature.title }}</h3>
+              <p class="textForCards">{{ feature.description }}</p>
+            </div>
           </div>
-        </div>
         }
-      <button id="prices-programm-button" class="pricesProgrammButton">Стоимость программ</button>
+
+        <button id="prices-program-button" class="pricesProgrammButton" type="button">Стоимость программ</button>
       </div>
-      
 
       <div class="imagesOfTours">
         <img src="images/ImagewaterSources.png" alt="ImagewaterSources" class="ImagewaterSources">
         <img src="images/ImagePersonOnMountain.png" alt="ImagepersonOnMountain" class="ImagepersonOnMountain">
         <img src="images/imagePersonInSnow.png" alt="ImagePersonInSnow" class="ImagePersonInSnow">
         <img src="images/ImageGreenMountains.png" alt="ImageGreenMountains" class="ImageGreenMountains">
-
       </div>
-
     </section>
   </main>
 }
- 
