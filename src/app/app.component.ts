@@ -5,6 +5,12 @@ import { Collection } from '../collection';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
+interface Feature {
+  Image: string;
+  title: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-root',
   imports: [FormsModule, DatePipe],
@@ -22,26 +28,27 @@ export class AppComponent {
   isCounterVisible: boolean = false;
   userText: string = '';
   isLoading: boolean = true;
-  features = [
+
+  features: Feature[] = [
   {
-    Image: 'images/peopleImage-icon.svg',
+    Image: 'peopleImage-icon',
     title: 'Опытный гид',
     description: `Для современного мира базовый вектор развития предполагает
 независимые способы реализации соответствующих условий активизации.`,
   },
   {
-    Image: 'images/supportImage-icon.svg',
+    Image: 'supportImage-icon',
     title: 'Безопасный поход',
     description: `Для современного мира базовый вектор развития предполагает
-независимые способы реализации соответствующих условий активизации.`,
+независимые способы реализации соответствующих условий активизации.`
   },
   {
-    Image: 'images/pricesImage-icon.svg',
+    Image: 'pricesImage-icon',
     title: 'Лояльные цены',
     description: `Для современного мира базовый вектор развития предполагает
-независимые способы реализации соответствующих условий активизации.`,
+независимые способы реализации соответствующих условий активизации.`
   }
-  ];
+];
 
 
   constructor() {

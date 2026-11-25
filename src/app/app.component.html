@@ -160,7 +160,7 @@
         @for (feature of features; track feature.title) {
           <div class="feature">
             <img
-              [src]="feature.Image"
+              [src]="'images/' + feature.Image + '.svg'"
               [alt]="feature.title"
               class="feature-image"
             >
